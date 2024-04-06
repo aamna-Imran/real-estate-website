@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #1f3e72;
+    --secondary: rgba(255, 255, 255, 0.78);
+    --black: #131110;
+    --blue-gradient: linear-gradient(97.05deg, #4066ff 3.76%, #2949c6 100%);
+    --orange-gradient: linear-gradient(270deg, #ffb978 0%, #ff922d 100%);
+    --blue: #4066ff;
+    --lightBlue: #eeeeff;
+    --shadow: 0px 23px 21px -8px rgba(136, 160, 255, 0.25);
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+  }
+}
+
+body {
+  font-family: "poppins";
+  overflow-x: hidden;
+  box-sizing: border-box;
+  scroll-behavior: smooth
+}
+
+@media (max-width: 786px){
+  .menu-icon {
+    display: block;
+  }
+  .h-menu {
+    z-index: 1;
+    position: absolute;
+    top: 3rem;
+    transition: all ease-in 0.2s;
+    width: 12rem;
+    height: 20rem;
+    background-color: aliceblue;
+    border-radius: 8px;
+    padding: 3rem;
+    display: flex;
+    color: #131110;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    gap: 10px;
+  }
+}
+
+.h-menu {
+  z-index: 1;
+  position: absolute;
+  top: 3rem;
+  transition: all ease-in 0.2s;
+  width: 12rem;
+  height: 20rem;
+  background-color: aliceblue;
+  border-radius: 8px;
+  padding: 3rem;
+  display: flex;
+  color: #131110;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  gap: 10px;
+}
+
+.bg-button {
+  background-image: linear-gradient(97.05deg, #4066ff 3.76%, #2949c6 100%)
+}
+.white-gradient {
+  width: 16rem;
+  position: absolute;
+  height: 16rem;
+  filter: blur(100px);
+  background-color: rgba(255, 255, 255, 0.552);
+}
+
+.orange-circle {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 100%;
+  background-image:linear-gradient(270deg, #ffb978 0%, #ff922d 100%); 
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .max-container {
+    @apply mx-auto max-w-[1400px];
+  }
+
+  .padding-container {
+    @apply px-6 lg:px-20 2xl:px-0;
+  }
+
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+
+  .flexBetween {
+    @apply flex items-center justify-between;
+  }
+
+  .flexStart {
+    @apply flex items-center justify-start;
+  }
+
+  .flexEnd {
+    @apply flex items-center justify-end;
+  }
+
+  .bold-88 {
+    @apply text-[88px] font-[700] leading-[120%];
+  }
+
+  .bold-64 {
+    @apply text-[64px] font-[700] leading-[120%];
+  }
+
+  .bold-52 {
+    @apply text-[52px] font-[700] leading-[120%];
+  }
+
+  .bold-40 {
+    @apply text-[40px] font-[700] leading-[120%];
+  }
+
+  .bold-32 {
+    @apply text-[32px] font-[700] leading-[120%];
+  }
+
+  .bold-20 {
+    @apply text-[20px] font-[700];
+  }
+
+  .bold-18 {
+    @apply text-[18px] font-[700];
+  }
+
+  .bold-16 {
+    @apply text-[16px] font-[700];
+  }
+
+}
